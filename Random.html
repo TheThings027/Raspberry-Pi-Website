@@ -1,0 +1,42 @@
+<!-- Life? -->
+
+<!DOCTYPE html>
+<html >
+
+  <div id="contentArea">
+    <div>
+
+<head><link rel="shortcut icon" href="/Resources/favicon.ico" type="image/x-icon"></head>
+
+    <div class='header'>
+        <a href='Main.html' class='logo' style='font-family: Title;'>Random</a>
+      </div>
+
+<script>
+function loadExternalHTMLPage() {
+var xmlhttp;
+var pagesToDisplay = ['Projects/index.html', 'Learn-To-Code!/index.html'];
+if (window.XMLHttpRequest) {
+xmlhttp = new XMLHttpRequest();
+} else {
+xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.onreadystatechange = function () {
+if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+document.getElementById("contentArea").innerHTML = xmlhttp.responseText;
+}
+}
+var randomnumber = Math.floor(Math.random() * pagesToDisplay.length);
+xmlhttp.open("GET", pagesToDisplay[randomnumber], true);
+xmlhttp.send();
+}
+  </script>
+
+    <script src="inline.js" type="text/javascript"></script>
+<body onload="loadExternalHTMLPage()">
+
+<meta http-equiv="refresh" content="50">
+
+</body>
+
+</html>

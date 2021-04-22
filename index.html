@@ -1,0 +1,172 @@
+<!-- Life? -->
+
+<!DOCTYPE html>
+<html >
+
+  <div id="contentArea">
+    <div>
+
+<head><link rel="shortcut icon" href="/Resources/favicon.ico" type="image/x-icon"></head>
+
+    <div class='header'>
+        <a href='Random.html' class='logo' style='font-family: Title;'>Random</a>
+      </div>
+
+<script>
+function loadExternalHTMLPage() {
+var xmlhttp;
+var pagesToDisplay = ['Projects/home.html', 'Learn-To-Code!/Home.html'];
+if (window.XMLHttpRequest) {
+xmlhttp = new XMLHttpRequest();
+} else {
+xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.onreadystatechange = function () {
+if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+document.getElementById("contentArea").innerHTML = xmlhttp.responseText;
+}
+}
+var randomnumber = Math.floor(Math.random() * pagesToDisplay.length);
+xmlhttp.open("GET", pagesToDisplay[randomnumber], true);
+xmlhttp.send();
+}
+  </script>
+
+    <script src="inline.js" type="text/javascript"></script>
+<body onload="loadExternalHTMLPage()">
+
+<style>
+
+html {background-color: #8dd3cd}
+
+@font-face {
+    font-family: Title;
+    src: url(Resources/SuperMario256.ttf);
+}
+
+@font-face {
+    font-family: Body;
+    src: url(Resources/Sansation_Bold.ttf);
+}
+
+@font-face {
+    font-family: Body;
+    src: url(Resources/Sansation_Bold_Italic.ttf);
+}
+
+@font-face {
+    font-family: Body;
+    src: url(Resources/Sansation_Italic.ttf);
+}
+
+@font-face {
+    font-family: Body;
+    src: url(Resources/Sansation_Regular.ttf);
+}
+
+@font-face {
+    font-family: BodyLight;
+    src: url(Resources/Sansation_Regular.ttf);
+}
+
+@font-face {
+    font-family: BodyLight;
+    src: url(Resources/Sansation_Light_Italic.ttf);
+}
+
+@font-face {
+    font-family: BodyLight;
+    src: url(Resources/Sansation_Light.ttf);
+}
+
+</style>
+
+<style class='Menu Buttons'>
+
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #8dd3cd;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: rgba(236, 173, 101, 0.548);
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: center;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
+
+</style>
+
+<title>Pick a page!</title>
+
+<body>
+
+<div class='Title' style='text-align: center'>
+    <h1 style='font-family: Title;'>
+Welcome
+    </h1>
+</div>
+
+<div class='Body1' style='text-align: center;'>
+
+    <article style='font-family: Body;' style='flex-wrap: wrap;'><i>
+    </i>On this web server, we have multiple web pages on the same domain! This means that you can choose what webpage you're going to from the list below.
+    </article>
+
+</div>
+
+<div class='header' class='header_right'>
+
+<a class='active' href='Learn-To-Code!/index.html'>Learn How To Code!</a><br>
+<br>
+<br>
+<a class='active' href='Projects/index.html'>Projects</a>
+
+</div>
+
+</body>
+
+</html>
